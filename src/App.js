@@ -25,9 +25,7 @@ function App() {
         const video = webcamRef.current.video;
         const canvas = canvasRef.current;
         const videoWidth = video.videoWidth;
-        console.log('detect -> videoWidth', videoWidth);
         const videoHeight = video.videoHeight;
-        console.log('detect -> videoHeight', videoHeight);
 
         // set video height and width
         video.width = videoWidth;
