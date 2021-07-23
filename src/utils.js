@@ -11,7 +11,6 @@ const keys = Object.keys(fingerJoints);
 // specified style for first point of all fingers
 const st = [1, 5, 9, 13, 17];
 export const drawHand = (predictions = [], ctx = null) => {
-  console.log('drawHand -> predictions', predictions);
   if (predictions.length > 0) {
     const [predictionVal] = predictions;
     const { landmarks } = predictionVal;
@@ -28,9 +27,6 @@ export const drawHand = (predictions = [], ctx = null) => {
     //elem : [x, y, z]
 
     keys.forEach((key, index, tab) => {
-      console.log('drawHand -> key', key);
-      console.log('***********************');
-
       for (let i = 0; i < fingerJoints[key].length - 1; i++) {
         const [x, y] = landmarks[fingerJoints[key][i]];
         //  for end line
